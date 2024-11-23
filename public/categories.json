@@ -1,14 +1,18 @@
 [
     {
       "id": 1,
-      "category": "Computers"
+      "category": "All Products"
     },
     {
       "id": 2,
-      "category": "Phones"
+      "category": "computers"
     },
     {
       "id": 3,
-      "category": "Smartwatches"
+      "category": "phones"
+    },
+    {
+      "id": 4,
+      "category": "smartwatches"
     }
   ]

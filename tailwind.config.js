@@ -13,6 +13,7 @@ export default {
         primary: '#9538E2',
         color: '#09080F',
         gray: '#09080F99',
+        btn: '#09080F',
         fontFamily: {
           sora: ['Sora', 'sans-serif'], 
         },

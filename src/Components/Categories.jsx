@@ -1,19 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Categories = ({categories=[]}) => {
+const Categories = ({ categories}) => {
     return (
-        <div className='w-[20%]'>
-            <div className='border-2 border-base-300 p-8 rounded-lg'>
-                {
-                    categories.map(category => (
-                        <Link key={category.category}
-                        to="/cards"
-                        className="btn btn-xs px-8">
-                         {category.category}   
-                        </Link>
-                    ))
-                }
+        <div className='w-[100%] sm:w-[30%]'>
+            <div className='border p-6 border-base-300 rounded-lg'>
+                <div className=''>
+                    {
+                        categories.map(category => (
+                            <Link key={category.category}
+                                to={`/category/${category.category}`}
+                                className=" flex flex-col mb-4 rounded-full px-4 py-2 bg-gray/20 ">
+                                <button>{category.category}</button>
+                            </Link>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     );

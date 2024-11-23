@@ -1,6 +1,6 @@
 [
     {
-      "product_id": 1,
+      "id": 1,
       "product_title": "MacBook Pro",
       "product_image": "https://i.ibb.co.com/KmZgXrb/computer-screens-running-programming-code-empty-software-developing-agency-office-computers-parsing.jpg",
       "category": "computers",
@@ -12,7 +12,7 @@
       "brand": "Apple"
     },
     {
-      "product_id": 2,
+      "id": 2,
       "product_title": "Dell XPS 15",
       "product_image": "https://i.ibb.co.com/YX4PTyB/diverse-group-employees-working-their-computers.jpg",
       "category": "computers",
@@ -24,7 +24,7 @@
       "brand": "Dell"
     },
     {
-      "product_id": 3,
+      "id": 3,
       "product_title": "HP Spectre x360",
       "product_image": " https://i.ibb.co.com/JC0xb0J/empty-desk-with-computers-customer-service-office-telecommunication-telework-assistance-telephone-he.jpg",
       "category": "computers",
@@ -36,7 +36,7 @@
       "brand": "HP"
     },
     {
-      "product_id": 4,
+      "id": 4,
       "product_title": "Lenovo ThinkPad X1",
       "product_image": "  https://i.ibb.co.com/XW41jVt/medium-shot-people-working-with-computers.jpg",
       "category": "computers",
@@ -48,7 +48,7 @@
       "brand": "Lenovo"
     },
     {
-      "product_id": 5,
+      "id": 5,
       "product_title": "Asus ROG Zephyrus G14",
       "product_image": " https://i.ibb.co.com/8mxvb9r/nobody-empty-call-center-workstation-with-computers-audio-instruments-no-people-customer-service-off.jpg",
       "category": "computers",
@@ -60,7 +60,7 @@
       "brand": "Asus"
     },
     {
-      "product_id": 6,
+      "id": 6,
       "product_title": "Acer Swift 3",
       "product_image": "  https://i.ibb.co.com/QjWtWsL/no-people-office-with-multiple-computers-customer-service-desk-call-center-helpline-support-give-tel.jpg",
       "category": "computers",
@@ -72,7 +72,7 @@
       "brand": "Acer"
     },
     {
-      "product_id": 7,
+      "id": 7,
       "product_title": "iPhone 14 Pro",
       "product_image": "https://i.ibb.co.com/zP7pLn9/329375-PAJ8-Y7-213.jpg",
       "category": "phones",
@@ -84,7 +84,7 @@
       "brand": "Apple"
     },
     {
-      "product_id": 8,
+      "id": 8,
       "product_title": "Samsung Galaxy S23",
       "product_image": "https://i.ibb.co.com/kJRKjkz/4791692.jpg",
       "category": "phones",
@@ -96,10 +96,10 @@
       "brand": "Samsung"
     },
     {
-      "product_id": 9,
+      "id": 9,
       "product_title": "Apple Watch Series 8",
       "product_image": " https://i.ibb.co.com/wg4YTXR/portrait-pretty-fitness-woman-earphones.jpg",
-      "category": "smart watches",
+      "category": "smartwatches",
       "price": 500,
       "description": "Advanced smartwatch with health tracking.",
       "specifications": ["Heart Rate Monitor", "GPS", "Blood Oxygen Sensor"],

@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
 import HeadLayout from "../Layouts/HeadLayout";
 import Home from "../Pages/Home";
 import Statistic from "../Pages/Statistic";
 import Dashboard from "../Pages/Dashboard";
 import ErrorPage from "../Components/ErrorPage";
+import CategoriesCards from "../Components/CategoriesCards";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +15,14 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch('./categories.json'),
+            loader: ()=> fetch('../categories.json'),
+            children:[
+              {
+                path: '/category/:category',
+                element: <CategoriesCards></CategoriesCards>,
+                loader: ()=> fetch('../categoriesData.json')
+              }
+            ]
         },
         {
             path: '/statistic',
@@ -25,6 +32,8 @@ const router = createBrowserRouter([
             path: '/dashboard',
             element: <Dashboard></Dashboard>,
         },
+        
+        
       ]
     }
   ])

@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fontSora {
+  font-family: "Sora", sans-serif;
+}
+
+/* .inter {
+  font-family: "Inter", sans-serif;
+} */
+/* .banner-btn {
+  border: 2px solid #E7FE29;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(9px);
+} */
+ 
+.subscribe {
+  box-shadow: inset 8px 44px 50px 20px rgba(211, 156, 5, 0.863);
+}
+
+.borders {
+  border: 2px solid rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.position {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(9px);
+
+  /*  h-72 sm:h-80 sticky top-0 bg-opacity-50 backdrop-blur-md bg-white z-50 */
+}

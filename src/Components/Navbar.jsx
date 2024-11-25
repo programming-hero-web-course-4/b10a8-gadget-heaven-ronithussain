@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { TiShoppingCart } from "react-icons/ti";
+import { FcLike } from "react-icons/fc";
 
 const Navbar = () => {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
+      
+    
     return (
-        <nav className='sm:p-8 p-3 '>
-            <div className=' bg-primary rounded-xl text-white '>
-                <div className="navbar container mx-auto">
+       
+        <nav className={`sm:p-8 p-4 mt-4 sm:mt-0 ${isHomePage ? 'absolute top-0 left-0 w-full text-white' : 'text-primary'}`}>
+            <div className='rounded-xl'>
+                <div className='navbar container mx-auto'>
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,23 +32,29 @@ const Navbar = () => {
                             <ul
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                <li><NavLink to='/'>Home</NavLink></li>
-                                <li><NavLink to='/statistic'>Statistic</NavLink ></li>
-                                <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                                <li><NavLink
+                                     to='/'>Home</NavLink></li>
+                                <li><NavLink  to='/statistic'>Statistic</NavLink ></li>
+                                <li><NavLink  to='/dashboard'>Dashboard</NavLink></li>
+                                <li><NavLink  to='/view'>Views</NavLink></li>
                             </ul>
                         </div>
-                        <Link to="/" className=" text-xl">Gadget Heaven</Link>
+                        <h3  className={`md:text-2xl lg:text-3xl font-medium ${
+                            isHomePage ? 'bg-transparent text-white' : 'text-primary'
+                        }`}>Gadget Heaven</h3>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-x-5">
-                            {/* className={({ isActive }) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} */}
-                            <li><NavLink to='/'>Home</NavLink></li>
+                            
+                            <li><NavLink  to='/'>Home</NavLink></li>
                             <li><NavLink to='/statistic'>Statistic</NavLink ></li>
-                            <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                            <li><NavLink  to='/dashboard'>Dashboard</NavLink></li>
+                            <li><NavLink  to='/view'>Views</NavLink></li>
                         </ul>
                     </div>
-                    <div className="navbar-end">
-                        <a className="btn">Button</a>
+                    <div className="navbar-end flex gap-x-3">
+                        <button className="hover:text-white hover:bg-slate-500 text-3xl text-black bg-white p-1 rounded-full "><TiShoppingCart ></TiShoppingCart></button>
+                        <button className="hover:text-white hover:bg-slate-500 text-3xl text-black bg-white p-1 rounded-full "><FcLike></FcLike></button>
                     </div>
                 </div>
             </div>

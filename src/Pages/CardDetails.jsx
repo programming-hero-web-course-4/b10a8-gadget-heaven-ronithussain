@@ -4,6 +4,7 @@ import Heading from '../Components/Heading';
 import { TiShoppingCart } from "react-icons/ti";
 import { FcLike } from "react-icons/fc";
 import { addToCard, getAllCard } from '../Utilities';
+import { addToWishlist, getAllWishlist } from '../Utilities/wishlist';
 
 const CardDetails = () => {
     const { id } = useParams();
@@ -11,13 +12,23 @@ const CardDetails = () => {
     const [card, setCard] = useState({})
 
     const [isFavorite, setIsFavorite] = useState(false)
+    const [isWishlist, setIsWishlist] = useState(false);
+
     useEffect(() => {
         const singleData = data.find(card => card.id === parseInt(id))
         setCard(singleData)
+
+        // Check if the item is in the favorite list
         const favorite = getAllCard();
         const isExist = favorite.find(item => item.id == singleData.id)
         if(isExist){
             setIsFavorite(true)
+        }
+        //  Check if the item is in the wishlist
+        const wishlist = getAllWishlist();
+        const isInWishlist = wishlist.find(item => item.id === singleData.id);
+        if (isInWishlist) {
+            setIsWishlist(true);
         }
     }, [card, id])
 
@@ -27,6 +38,11 @@ const CardDetails = () => {
         addToCard(card)
         setIsFavorite(true)
     }
+    const handleAddToWishlist = (card) => {
+        addToWishlist(card);
+        setIsWishlist(true);
+    };
+
     return (
         <>
             <div className='flex sm:flex-col sm:min-h-screen'>
@@ -46,7 +62,7 @@ const CardDetails = () => {
                                 <div>
                                     <h1 className="text-2xl sm:text-3xl font-bold">{product_title}</h1>
                                     <p className='font-bold mt-2 lg:text-2xl '>Price: {price}</p>
-                                    <p className="py-4 font-thin ">
+                                    <div className="py-4 font-thin ">
                                         {description}
                                         {/* specifications */}
                                         <div className='flex-col justify-center gap-4'>
@@ -59,7 +75,7 @@ const CardDetails = () => {
                                                 }
                                             </ul>
                                         </div>
-                                    </p>
+                                    </div>
                                     <div>
                                         <h3 className='font-semibold text-xl sm:text-2xl mb-1'>Ratings:</h3>
                                         <div className='flex items-center gap-x-6'>
@@ -79,23 +95,25 @@ const CardDetails = () => {
                                     </div>
 
 
-{/* add to card or wishlist button */}
-<div className='flex gap-x-1 sm:gap-x-2 mt-6'>
+            {/* add to card or wishlist button */}
+            <div className='flex gap-x-1 sm:gap-x-2 mt-6'>
 
-<button 
- disabled={isFavorite}
- onClick={()=> handleAddToCard(card)} 
- className="btn btn-sm btn-accent btn-outline bg-primary rounded-full">
-    Add To Card 
-    <small className='text-2xl'><TiShoppingCart></TiShoppingCart>
-    </small>    
-</button>
+            <button 
+             disabled={isFavorite}
+             onClick={()=> handleAddToCard(card)} 
+             className="btn btn-sm btn-accent btn-outline bg-primary rounded-full">
+                Add To Card 
+                <small className='text-2xl'><TiShoppingCart></TiShoppingCart>
+                </small>    
+            </button>
 
-<button 
-className=" btn-sm px-3  btn-accent btn-outline bg-primary rounded-full text-2xl">
-    <FcLike></FcLike>
-</button>
-</div>
+            <button 
+            disabled={isWishlist}
+            onClick={()=> handleAddToWishlist(card)}
+            className=" btn-sm px-3  btn-accent btn-outline bg-primary rounded-full text-2xl">
+                <FcLike></FcLike>
+            </button>
+            </div>
 
                                 </div>
                             </div>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Card = ({cards}) => {
+
     const {product_title,product_image,price,id}= cards || {};
 
     return (

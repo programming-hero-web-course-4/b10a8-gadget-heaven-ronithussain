@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Product A",
+      "price": 120,
+      "total": 500,
+      "rating": 4.5
+    },
+    {
+      "name": "Product B",
+      "price": 80,
+      "total": 300,
+      "rating": 4.0
+    },
+    {
+      "name": "Product C",
+      "price": 150,
+      "total": 700,
+      "rating": 4.8
+    },
+    {
+      "name": "Product D",
+      "price": 200,
+      "total": 450,
+      "rating": 4.2
+    },
+    {
+      "name": "Product E",
+      "price": 100,
+      "total": 600,
+      "rating": 4.7
+    }
+  ]
+  

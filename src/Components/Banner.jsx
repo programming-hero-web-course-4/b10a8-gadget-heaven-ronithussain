@@ -17,7 +17,7 @@ const Banner = () => {
             </div>
             <div className="relative lg:mb-96 md:mb-36 mb-28 ">
                 <div className='
-                borders p-4  position absolute -top-20 left-10 md:-top-28 md:left-[20%] lg:-top-22 lg:left-[21%] 
+                borders p-4  position absolute -top-20 left-10 md:-top-28 md:left-[20%] lg:-top-22 lg:left-[11%] 
                 '>
                     <div className=' bg-banner  rounded-lg  bg-cover   bg-no-repeat bg-center w-[250px] h-[200px] lg:w-[1400px] md:w-[500px] lg:h-[600px] md:h-[300px]
                     

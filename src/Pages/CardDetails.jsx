@@ -67,7 +67,7 @@ const CardDetails = () => {
                     <Heading title={'Product Details'} subTitle={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'}></Heading>
                 </div>
 
-                <div className='absolute lg:top-[40%] md:top-[100%] lg:left-[25%] md:left-[10%] top-[45%] z-10'>
+                <div className='absolute lg:top-[45%] md:top-[100%] lg:left-[25%] md:left-[10%] top-[45%] z-10'>
                     <div className='container mx-auto sm:px-0 px-5'>
                         <div className=" rounded-lg flex justify-center bg-white">
                             <div className="flex flex-col sm:flex-row p-4 sm:gap-x-6 border-2 border-base-200 rounded-xl">

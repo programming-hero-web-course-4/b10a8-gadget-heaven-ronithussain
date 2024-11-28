@@ -37,6 +37,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/view',
+            loader: ()=> fetch('./views.json'),
             element: <View></View>,
         },
         {

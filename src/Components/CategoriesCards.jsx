@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import Card from './Card';
-import Heading from './Heading';
 
 const CategoriesCards = () => {
   const data = useLoaderData();
@@ -21,18 +20,9 @@ const CategoriesCards = () => {
     }
 
     else {
-      setProducts(data.slice(0, 3));
+      setProducts(data);
     }
   }, [data, category]);
-  // console.log(data)
-  console.log(category)
-
-  // useEffect(()=>{
-  //     const filteredByCategory =data.filter(product => product.category === category)
-  //     setProducts(filteredByCategory)
-  //     console.log(filteredByCategory)
-  // } ,[data,category])
-  // console.log(data)
 
   return (
     <>

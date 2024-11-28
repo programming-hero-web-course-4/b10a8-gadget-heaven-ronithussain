@@ -1,11 +1,16 @@
-import React from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { TiShoppingCart } from "react-icons/ti";
 import { FcLike } from "react-icons/fc";
+import { getAllCard } from '../Utilities';
 
 const Navbar = () => {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
+
+    const navigate = useNavigate();
+
+    //state for cart lwngth
       
     
     return (
@@ -53,8 +58,10 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end flex gap-x-3">
-                        <button className="hover:text-white hover:bg-slate-500 text-3xl text-black bg-white p-1 rounded-full "><TiShoppingCart ></TiShoppingCart></button>
-                        <button className="hover:text-white hover:bg-slate-500 text-3xl text-black bg-white p-1 rounded-full "><FcLike></FcLike></button>
+                        <button onClick={()=> navigate('/dashboard')} className="hover:text-white hover:bg-slate-500 text-3xl text-black bg-white p-1 rounded-full "><TiShoppingCart ></TiShoppingCart>
+                        
+                        </button>
+                        <button onClick={()=> navigate("/dashboard")} className="hover:text-white hover:bg-slate-500 text-3xl text-black bg-white p-1 rounded-full "><FcLike></FcLike></button>
                     </div>
                 </div>
             </div>

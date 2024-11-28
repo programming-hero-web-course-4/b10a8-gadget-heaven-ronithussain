@@ -21,13 +21,25 @@
       "name": "Product D",
       "price": 200,
       "total": 450,
-      "rating": 4.2
+      "rating": 4.3
     },
     {
       "name": "Product E",
       "price": 100,
       "total": 600,
-      "rating": 4.7
+      "rating": 4.1
+    },
+    {
+      "name": "Product F",
+      "price": 900,
+      "total": 200,
+      "rating": 4.2
+    },
+    {
+      "name": "Product G",
+      "price": 744,
+      "total": 650,
+      "rating": 4.9
     }
   ]
   

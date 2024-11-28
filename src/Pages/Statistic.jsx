@@ -25,7 +25,7 @@ const Statistic = () => {
                     <h1 className="text-2xl font-bold my-4">Product Bar Chart</h1>
                     <BarChart
                         width={1200}
-                        height={700}
+                        height={550}
                         data={chart}
                         margin={{ top: 20, right: 30, left: 20, bottom: 10 }}
                     >

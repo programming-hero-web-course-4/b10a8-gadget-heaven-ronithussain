@@ -5,6 +5,7 @@ import { TiShoppingCart } from "react-icons/ti";
 import { FcLike } from "react-icons/fc";
 import { addToCard, getAllCard } from '../Utilities';
 import { addToWishlist, getAllWishlist } from '../Utilities/wishlist';
+import toast from 'react-hot-toast';
 
 const CardDetails = () => {
     const { id } = useParams();
@@ -21,7 +22,7 @@ const CardDetails = () => {
         // Check if the item is in the favorite list
         const favorite = getAllCard();
         const isExist = favorite.find(item => item.id == singleData.id)
-        if(isExist){
+        if (isExist) {
             setIsFavorite(true)
         }
         //  Check if the item is in the wishlist
@@ -34,11 +35,22 @@ const CardDetails = () => {
 
     const { product_title, product_image, price, description, specifications, rating } = card;
 
-    const handleAddToCard =(card) => {
+    const handleAddToCard = (card) => {
+        if (isWishlist) {
+            toast.error('This item is already in the Wishlist!')
+            return;
+        }
         addToCard(card)
         setIsFavorite(true)
+
+        const updateCart = getAllCard();
+        setCartLength(updateCart.length)
     }
     const handleAddToWishlist = (card) => {
+        if (isFavorite) {
+            toast.error('This item is already in the Cart!')
+            return;
+        }
         addToWishlist(card);
         setIsWishlist(true);
     };
@@ -79,7 +91,7 @@ const CardDetails = () => {
                                     <div>
                                         <h3 className='font-semibold text-xl sm:text-2xl mb-1'>Ratings:</h3>
                                         <div className='flex items-center gap-x-6'>
-                                            <p><div className="rating sm:rating-md rating-xs">
+                                            <div><div className="rating sm:rating-md rating-xs">
                                                 <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
                                                 <input
                                                     type="radio"
@@ -89,31 +101,31 @@ const CardDetails = () => {
                                                 <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
                                                 <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
                                                 <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
-                                            </div></p>
+                                            </div></div>
                                             <p className='font-bold sm:text-2xl text-xl'>{rating}</p>
                                         </div>
                                     </div>
 
 
-            {/* add to card or wishlist button */}
-            <div className='flex gap-x-1 sm:gap-x-2 mt-6'>
+                                    {/* add to card or wishlist button */}
+                                    <div className='flex gap-x-1 sm:gap-x-2 mt-6'>
 
-            <button 
-             disabled={isFavorite}
-             onClick={()=> handleAddToCard(card)} 
-             className="btn btn-sm btn-accent btn-outline bg-primary rounded-full">
-                Add To Card 
-                <small className='text-2xl'><TiShoppingCart></TiShoppingCart>
-                </small>    
-            </button>
+                                        <button
+                                            disabled={isFavorite}
+                                            onClick={() => handleAddToCard(card)}
+                                            className="btn btn-sm btn-accent btn-outline bg-primary rounded-full">
+                                            Add To Card
+                                            <small className='text-2xl'><TiShoppingCart></TiShoppingCart>
+                                            </small>
+                                        </button>
 
-            <button 
-            disabled={isWishlist}
-            onClick={()=> handleAddToWishlist(card)}
-            className=" btn-sm px-3  btn-accent btn-outline bg-primary rounded-full text-2xl">
-                <FcLike></FcLike>
-            </button>
-            </div>
+                                        <button
+                                            disabled={isWishlist}
+                                            onClick={() => handleAddToWishlist(card)}
+                                            className=" btn-sm px-3  btn-accent btn-outline bg-primary rounded-full text-2xl">
+                                            <FcLike></FcLike>
+                                        </button>
+                                    </div>
 
                                 </div>
                             </div>

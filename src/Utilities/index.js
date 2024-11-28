@@ -31,52 +31,7 @@ const removeFavorite = (id) => {
     toast.success('Card is Successfully removed')
 }
 
-// Get all wishlist items from local storage
-
-// Add a card to wishlist
-
-// Remove an item from wishlist
 
 export { addToCard, getAllCard, removeFavorite };
-
-// import toast from "react-hot-toast";
-
-// //get all product from local storage
-// const getAllFavorites = ()=> {
-//     const all = localStorage.getItem('favorites')
-//     if(all){
-//         const favorites =JSON.parse(all)
-//         return favorites
-//     }
-//     else{
-//         return []
-//     }
-// }
-
-
-
-// // add a product to local storage
-// const addFavorite = product => {
-//     const favorites = getAllFavorites()
-//     const isExist = favorites.find(item => item.product_id === product.product_id)
-//     if(isExist) return toast.error('Product already Exist!');
-//     favorites.push(product)
-//     localStorage.setItem('favorites', JSON.stringify(favorites))
-//     toast.success('Successfully added!');
-// }
-
-
-// const removeFavorite = id => {
-//     const favorites = getAllFavorites()
-//     const remaining = favorites.filter(coffee => coffee.id !== id)
-//     localStorage.setItem('favorites', JSON.stringify(remaining))
-//     toast.success('Successfully removed!');
-// }
-
-
-// //remove a product from local storage
-
-// export {addFavorite, getAllFavorites, removeFavorite}
-
 
 

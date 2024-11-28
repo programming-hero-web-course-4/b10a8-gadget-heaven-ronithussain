@@ -13,7 +13,7 @@ const Statistic = () => {
     }, [])
     return (
         <>
-            {/* <h1 className=''>{data.length}</h1> */}
+           
             <div className=' bg-primary w-full  h-[400px] pt-1 text-white/80'>
                 <Heading
                     title='Statistics'

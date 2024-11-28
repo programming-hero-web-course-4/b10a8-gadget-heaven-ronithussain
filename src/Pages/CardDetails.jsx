@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useOutletContext, useParams } from 'react-router-dom';
 import Heading from '../Components/Heading';
 import { TiShoppingCart } from "react-icons/ti";
 import { FcLike } from "react-icons/fc";
@@ -14,6 +14,8 @@ const CardDetails = () => {
 
     const [isFavorite, setIsFavorite] = useState(false)
     const [isWishlist, setIsWishlist] = useState(false);
+
+    const [cartCount, setCartCount]= useOutletContext()
 
     useEffect(() => {
         const singleData = data.find(card => card.id === parseInt(id))
@@ -33,7 +35,7 @@ const CardDetails = () => {
         }
     }, [card, id])
 
-    const { product_title, product_image, price, description, specifications, rating } = card;
+    const { product_title, product_image, price, description, specifications, rating, availability } = card;
 
     const handleAddToCard = (card) => {
         if (isWishlist) {
@@ -42,6 +44,9 @@ const CardDetails = () => {
         }
         addToCard(card)
         setIsFavorite(true)
+
+        const updateCount = addToCard(card);
+        setCartCount(updateCount);
 
         const updateCart = getAllCard();
         setCartLength(updateCart.length)
@@ -74,6 +79,9 @@ const CardDetails = () => {
                                 <div>
                                     <h1 className="text-2xl sm:text-3xl font-bold">{product_title}</h1>
                                     <p className='font-bold mt-2 lg:text-2xl '>Price: {price}</p>
+
+                                    <p className={` text-sm font-bold mt-2 ${availability ? 'text-green-500' : 'text-red-500'}`}>{availability ? 'Available' : 'Out of Stock'}</p>
+                                    
                                     <div className="py-4 font-thin ">
                                         {description}
                                         {/* specifications */}

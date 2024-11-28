@@ -19,11 +19,6 @@ const Dashboard = () => {
 
     }, []);
 
-    // useEffect(()=>{
-    //     const wishlist = getAllWishlist();
-    //     setWishlist(wishlist)
-    // } ,[])
-
 
     const handleDelete = (id) => {
         removeFavorite(id)
@@ -46,10 +41,10 @@ const Dashboard = () => {
                         subTitle='Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'
                     ></Heading>
 
-                    <div className='flex gap-x-4 justify-center'>
+                    <div className='flex flex-col sm:flex-row gap-x-4 justify-center px-4 sm:px-0'>
                         <button
                             onClick={() => setActive('cart')}
-                            className={`btn border-primary/50 rounded-full text-primary font-medium px-12 text-xl ${active === 'cart' ? 'bg-yellow-400 text-primary' : 'text-secondary'}`}>Cart</button>
+                            className={`btn sm:my-0 my-3 border-primary/50 rounded-full text-primary font-medium px-12 text-xl ${active === 'cart' ? 'bg-yellow-400 text-primary' : 'text-secondary'}`}>Cart</button>
 
                         <button
                             onClick={() => setActive('wishlist')}

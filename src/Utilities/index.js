@@ -17,18 +17,24 @@ const addToCard = (card) => {
     const favorite = getAllCard()
     const isExist = favorite.find(item => item.id == card.id)
 
-    if (isExist) return toast.error('Card is Already Exist');
+    if (isExist){
+        return favorite.length;
+    };
+   
 
     favorite.push(card)
     localStorage.setItem('favorite', JSON.stringify(favorite));
     toast.success('Card is Successfully Added')
+    return favorite.length;
 }
 // remove a card from local storage
 const removeFavorite = (id) => {
     const favorite = getAllCard();
     const remaining = favorite.filter(card => card.id != id);
     localStorage.setItem('favorite', JSON.stringify(remaining));
+
     toast.success('Card is Successfully removed')
+    return remaining.length 
 }
 
 

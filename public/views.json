@@ -2,7 +2,7 @@
     {
       "product_id": 1,
       "product_title": "Dell XPS 13",
-      "product_image": "https://example.com/images/dell-xps13.jpg",
+      "product_image": "https://i.ibb.co.com/xSnHRFh/still-life-books-versus-technology.jpg",
       "category": "Laptop",
       "price": 1200,
       "description": "13.4-inch ultra-slim laptop with high-resolution display.",
@@ -18,7 +18,7 @@
     {
       "product_id": 2,
       "product_title": "MacBook Air M2",
-      "product_image": "https://example.com/images/macbook-air-m2.jpg",
+      "product_image": "https://i.ibb.co.com/QvzWqhc/samsung-memory-l-p4pay8-CTM-unsplash.jpg",
       "category": "Laptop",
       "price": 1500,
       "description": "Apple M2 chip with fanless design and ultra-long battery life.",
@@ -34,7 +34,7 @@
     {
       "product_id": 3,
       "product_title": "HP Spectre x360",
-      "product_image": "https://example.com/images/hp-spectre-x360.jpg",
+      "product_image": "https://i.ibb.co.com/Cnj05j7/laptop-near-globe-stationery.jpg",
       "category": "Laptop",
       "price": 1400,
       "description": "Convertible laptop with 2-in-1 functionality.",
@@ -50,7 +50,7 @@
     {
       "product_id": 4,
       "product_title": "Lenovo ThinkPad X1 Carbon",
-      "product_image": "https://example.com/images/lenovo-x1-carbon.jpg",
+      "product_image": "https://i.ibb.co.com/M9rjgw4/market-trends-concept-with-laptop.jpg",
       "category": "Laptop",
       "price": 1600,
       "description": "Business-grade ultrabook with premium build quality.",
@@ -66,7 +66,7 @@
     {
       "product_id": 5,
       "product_title": "Apple AirPods Pro 2",
-      "product_image": "https://example.com/images/airpods-pro-2.jpg",
+      "product_image": "https://i.ibb.co.com/YcJn8xy/kirill-qr2cn19ix-Qs-unsplash.jpg",
       "category": "AirPods",
       "price": 250,
       "description": "High-quality noise-cancelling earbuds with spatial audio.",
@@ -82,7 +82,7 @@
     {
       "product_id": 6,
       "product_title": "Samsung Galaxy Buds Pro",
-      "product_image": "https://example.com/images/galaxy-buds-pro.jpg",
+      "product_image": "https://i.ibb.co.com/5KVp1T1/mayur-ys-U-C-nnr-ZY-unsplash.jpg",
       "category": "AirPods",
       "price": 200,
       "description": "Premium earbuds with crystal-clear sound and active noise cancellation.",
@@ -98,7 +98,7 @@
     {
       "product_id": 7,
       "product_title": "Sony WF-1000XM4",
-      "product_image": "https://example.com/images/sony-wf-1000xm4.jpg",
+      "product_image": "https://i.ibb.co.com/gRtLkBy/omid-armin-An-Oq-YTCp-Pmw-unsplash.jpg",
       "category": "AirPods",
       "price": 280,
       "description": "Industry-leading noise-cancelling earbuds with exceptional sound quality.",
@@ -114,7 +114,7 @@
     {
       "product_id": 8,
       "product_title": "Bose QuietComfort Earbuds II",
-      "product_image": "https://example.com/images/bose-qc-earbuds-ii.jpg",
+      "product_image": "https://i.ibb.co.com/B2HnZMR/omid-armin-u-Z8-ZYu-YAX4-A-unsplash.jpg",
       "category": "AirPods",
       "price": 299,
       "description": "Best-in-class noise cancellation with comfortable fit.",
@@ -125,6 +125,22 @@
         "Bluetooth 5.3"
       ],
       "availability": false,
+      "rating": 4.7
+    },
+    {
+      "product_id": 9,
+      "product_title": "Dell XPS 13",
+      "product_image": "https://i.ibb.co.com/xSnHRFh/still-life-books-versus-technology.jpg",
+      "category": "Laptop",
+      "price": 1200,
+      "description": "13.4-inch ultra-slim laptop with high-resolution display.",
+      "specifications": [
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD",
+        "13.4-inch FHD Display"
+      ],
+      "availability": true,
       "rating": 4.7
     }
   ]

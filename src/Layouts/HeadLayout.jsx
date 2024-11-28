@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { Outlet } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
+import { getAllCard } from '../Utilities';
 
 const HeadLayout = () => {
+
+    const [cartCount, setCartCount] = useState(0);
+    useEffect(()=> {
+        const initialCount = getAllCard().length;
+        setCartCount(initialCount);
+    },[])
     return (
         <div>
                <Toaster />
             {/* Navbar */}
-            <Navbar></Navbar>
+            <Navbar cartCount={cartCount}></Navbar>
             {/* Dynamic section */}
             <div className='min-h-[calc(100vh-610px)]'>
-                <Outlet></Outlet>
+                <Outlet context={[cartCount, setCartCount]}></Outlet>
             </div>
             {/* Footer */}
             <Footer> </Footer>

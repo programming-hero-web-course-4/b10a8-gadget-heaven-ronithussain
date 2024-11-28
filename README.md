@@ -6,7 +6,7 @@
 [Visit GadgetHeaven Live](https://your-live-website-link.com)
 
 ## Requirement Document Link
-[View Requirement Document](https://your-requirement-document-link.com)
+[View Requirement Document](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-ronithussain)
 
 ---
 

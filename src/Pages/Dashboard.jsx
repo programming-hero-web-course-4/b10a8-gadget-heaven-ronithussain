@@ -4,6 +4,7 @@ import { getAllCard, removeFavorite } from '../Utilities';
 import { getAllWishlist, removeFromWishlist } from '../Utilities/wishlist';
 import Cart from './Cart';
 import Wishlist from './Wishlist';
+import { Helmet } from 'react-helmet';
 
 const Dashboard = () => {
     const [card, setCard] = useState([]);
@@ -36,6 +37,9 @@ const Dashboard = () => {
         <>
             <div className='mb-44'>
                 <div className=' bg-primary w-full  h-[500px] pt-1 text-white/80'>
+                    <Helmet>
+                        <title> DashboardPage</title>
+                    </Helmet>
                     <Heading
                         title='Dashboard'
                         subTitle='Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'

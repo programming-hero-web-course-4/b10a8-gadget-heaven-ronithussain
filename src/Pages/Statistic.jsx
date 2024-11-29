@@ -2,6 +2,7 @@
 import Heading from '../Components/Heading';
 
 import React, { useEffect, useState } from "react";
+import { Helmet } from 'react-helmet';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 
 const Statistic = () => {
@@ -15,6 +16,9 @@ const Statistic = () => {
         <>
            
             <div className=' bg-primary w-full  h-[400px] pt-1 text-white/80'>
+            <Helmet>
+                <title> StatisticPage</title>
+            </Helmet>
                 <Heading
                     title='Statistics'
                     subTitle='Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'

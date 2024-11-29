@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { NavLink, useLoaderData } from 'react-router-dom';
 
 const View = () => {
@@ -7,6 +8,9 @@ const View = () => {
     return (
         <>
             <div className='container mx-auto mt-4'>
+            <Helmet>
+                <title> ViewsPage</title>
+            </Helmet>
                 <h1 className='text-xl md:text-2xl lg:text-3xl font-bold mb-6 text-center underline'>Products</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mb-6 sm:px-0 px-1'>
                     {

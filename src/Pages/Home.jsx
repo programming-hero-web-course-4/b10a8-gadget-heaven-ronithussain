@@ -3,11 +3,15 @@ import Banner from '../Components/Banner';
 import Categories from '../Components/Categories';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Heading from '../Components/Heading';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     const categories = useLoaderData();
     return (
         <div className='mt-8'>
+            <Helmet>
+                <title> HomePage</title>
+            </Helmet>
             {/* Banner */}
             <Banner></Banner>
 

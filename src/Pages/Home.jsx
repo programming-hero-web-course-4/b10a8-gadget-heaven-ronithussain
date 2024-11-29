@@ -7,8 +7,7 @@ import Heading from '../Components/Heading';
 const Home = () => {
     const categories = useLoaderData();
     return (
-        <div>
-            Home
+        <div className='mt-8'>
             {/* Banner */}
             <Banner></Banner>
 

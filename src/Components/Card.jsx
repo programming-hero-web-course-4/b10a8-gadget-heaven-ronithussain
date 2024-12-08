@@ -14,7 +14,6 @@ const Card = ({cards}) => {
                 <img className='rounded-lg  w-full h-36' src={product_image} alt="" />
             </figure>
             <div className='mt-4'>
-                {id}
                 <h1 className='text-xl'> {product_title}</h1>
                 <p>Price: {price}</p>
 
